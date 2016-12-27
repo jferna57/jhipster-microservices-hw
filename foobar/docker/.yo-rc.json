@@ -1,0 +1,14 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "bar-service",
+      "foo-service",
+      "gateway"
+    ],
+    "directoryPath": "../",
+    "useElk": true,
+    "serviceDiscoveryType": "eureka",
+    "adminPassword": "admin",
+    "jwtSecretKey": "4bf5fc3ba0ec7ae3301ea8a7d1335add13227567"
+  }
+}

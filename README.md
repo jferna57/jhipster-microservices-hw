@@ -53,3 +53,43 @@ yo jhipster:entity Foo
 ```
 
 ![Jhipster foo-service Foo Entity](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/bar-service-Entity-Bar.jpg)
+
+### 4. Create the docker images
+
+The gradle command will fetch all the fancy dependencies for spring and finally generates a docker image, which will be saved to our local image registry.
+
+__IMPORTANT !!! This command can not be done inside docker.__
+
+``` bash
+cd ..
+cd foo-service
+./gradlew build -Pprod buildDocker
+cd ..
+cd bar-service
+./gradlew build -Pprod buildDocker
+```
+### 5. Generate the gateway
+
+``` bash
+cd ..
+cd gateway
+yo jhipster
+```
+![gateway](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/gateway.jpg)
+
+### 6. Import the generated Entities (Foo and Bar) and generate gateway docker image
+
+``` bash
+yo jhipster:entity Foo
+yo jhipster:entity Bar
+./gradlew build -Pprod -x test buildDocker
+```
+
+### 7. Generate docker compose
+
+``` bash
+cd ..
+yo jhipster:docker-compose
+```
+
+![Docker-compose](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/docker-compose.jpg)
