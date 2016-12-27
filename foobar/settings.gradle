@@ -1,0 +1,3 @@
+include 'bar-service'
+include 'foo-service'
+include 'gateway'
