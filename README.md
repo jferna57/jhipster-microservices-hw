@@ -27,7 +27,12 @@ $ mkdir foobar
 $ cd foobar
 $ mkdir foo-service bar-service gateway docker
 ```
+### 3. Create the FooService and BarService
 
+``` bash
+cd foo-service
+yo jhipster
+```
 ![Jhipster foo-service](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/foo-service.jpg)
 
 ``` bash
@@ -35,3 +40,16 @@ yo jhipster:entity Foo
 ```
 
 ![Jhipster foo-service Foo Entity](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/foo-service-Entity-Foo.jpg)
+
+``` bash
+cd ..
+cd bar-service
+yo jhipster
+```
+![Jhipster bar-service](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/bar-service.jpg)
+
+``` bash
+yo jhipster:entity Foo
+```
+
+![Jhipster foo-service Foo Entity](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/bar-service-Entity-Bar.jpg)
