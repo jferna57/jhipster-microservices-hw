@@ -11,8 +11,10 @@ In the diagram below, the green components are specific to your application and 
 
 ![microservices architecture](https://jhipster.github.io/images/microservices_architecture_2.png)
 
+
 ## Installation.
 
+![jhipster](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/jhipster-microservices-poc.png)
 
 ### 1. Jhipster docker Installation.
 
