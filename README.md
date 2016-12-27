@@ -16,12 +16,11 @@ In the diagram below, the green components are specific to your application and 
 
 ### Architecture Overview
 
-In the diagram below, it shows the components
+The diagram below shows the main components:
+
 ![Sample Architecture ](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/jhipster-microservices-poc.png)
 
 ### Steps.
-
-
 #### 1. Jhipster docker Installation.
 
 ``` bash
