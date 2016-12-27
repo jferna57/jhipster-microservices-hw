@@ -93,3 +93,11 @@ yo jhipster:docker-compose
 ```
 
 ![Docker-compose](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/docker-compose.jpg)
+
+### 8. Start the cloud using docker-compose
+
+__IMPORTANT: Remember to stop docker jhipster image.
+
+``` bash
+docker-compose up -d
+```
