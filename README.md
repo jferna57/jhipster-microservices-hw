@@ -22,8 +22,16 @@ docker pull jhipster/jhipster
 
 ### 2. Basic microservice setup
 
-
-
+``` bash
 $ mkdir foobar
 $ cd foobar
 $ mkdir foo-service bar-service gateway docker
+```
+
+![Jhipster foo-service](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/foo-service.jpg)
+
+``` bash
+yo jhipster:entity Foo
+```
+
+![Jhipster foo-service Foo Entity](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/foo-service-Entity-Foo.jpg)
