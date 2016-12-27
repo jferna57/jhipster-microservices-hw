@@ -1,0 +1,12 @@
+version: '2'
+services:
+    barservice-postgresql:
+        container_name: barservice-postgresql
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/barService/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=barService
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

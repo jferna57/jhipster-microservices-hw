@@ -1,0 +1,43 @@
+package net.jferna57.jhipster.microservices.web.rest.util;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
+
+/**
+ * Utility class for HTTP headers creation.
+ */
+public final class HeaderUtil {
+
+    private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
+
+    private HeaderUtil() {
+    }
+
+    public static HttpHeaders createAlert(String message, String param) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("X-barServiceApp-alert", message);
+        headers.add("X-barServiceApp-params", param);
+        return headers;
+    }
+
+    public static HttpHeaders createEntityCreationAlert(String entityName, String param) {
+        return createAlert("barServiceApp." + entityName + ".created", param);
+    }
+
+    public static HttpHeaders createEntityUpdateAlert(String entityName, String param) {
+        return createAlert("barServiceApp." + entityName + ".updated", param);
+    }
+
+    public static HttpHeaders createEntityDeletionAlert(String entityName, String param) {
+        return createAlert("barServiceApp." + entityName + ".deleted", param);
+    }
+
+    public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
+        log.error("Entity creation failed, {}", defaultMessage);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("X-barServiceApp-error", "error." + errorKey);
+        headers.add("X-barServiceApp-params", entityName);
+        return headers;
+    }
+}
