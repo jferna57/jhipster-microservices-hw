@@ -12,24 +12,30 @@ In the diagram below, the green components are specific to your application and 
 ![microservices architecture](https://jhipster.github.io/images/microservices_architecture_2.png)
 
 
-## Installation.
+## Proof Of Concept
 
-![jhipster](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/jhipster-microservices-poc.png)
+### Architecture Overview
 
-### 1. Jhipster docker Installation.
+In the diagram below, it shows the components
+![Sample Architecture ](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/jhipster-microservices-poc.png)
+
+### Steps.
+
+
+#### 1. Jhipster docker Installation.
 
 ``` bash
 docker pull jhipster/jhipster
 ```
 
-### 2. Basic microservice setup
+#### 2. Basic microservice setup
 
 ``` bash
 $ mkdir foobar
 $ cd foobar
 $ mkdir foo-service bar-service gateway docker
 ```
-### 3. Create the FooService and BarService
+#### 3. Create the FooService and BarService
 
 ``` bash
 cd foo-service
@@ -56,7 +62,7 @@ yo jhipster:entity Foo
 
 ![Jhipster foo-service Foo Entity](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/bar-service-Entity-Bar.jpg)
 
-### 4. Create the docker images
+#### 4. Create the docker images
 
 The gradle command will fetch all the fancy dependencies for spring and finally generates a docker image, which will be saved to our local image registry.
 
@@ -70,7 +76,7 @@ cd ..
 cd bar-service
 ./gradlew build -Pprod buildDocker
 ```
-### 5. Generate the gateway
+#### 5. Generate the gateway
 
 ``` bash
 cd ..
@@ -79,7 +85,7 @@ yo jhipster
 ```
 ![gateway](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/gateway.jpg)
 
-### 6. Import the generated Entities (Foo and Bar) and generate gateway docker image
+#### 6. Import the generated Entities (Foo and Bar) and generate gateway docker image
 
 ``` bash
 yo jhipster:entity Foo
@@ -87,7 +93,7 @@ yo jhipster:entity Bar
 ./gradlew build -Pprod -x test buildDocker
 ```
 
-### 7. Generate docker compose
+#### 7. Generate docker compose
 
 ``` bash
 cd ..
@@ -96,7 +102,7 @@ yo jhipster:docker-compose
 
 ![Docker-compose](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/docker-compose.jpg)
 
-### 8. Start the cloud using docker-compose
+#### 8. Start the cloud using docker-compose
 
 __IMPORTANT: Remember to stop docker jhipster image.__
 
