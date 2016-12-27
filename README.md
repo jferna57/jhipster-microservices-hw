@@ -96,8 +96,11 @@ yo jhipster:docker-compose
 
 ### 8. Start the cloud using docker-compose
 
-__IMPORTANT: Remember to stop docker jhipster image.
+__IMPORTANT: Remember to stop docker jhipster image.__
 
 ``` bash
 docker-compose up -d
 ```
+On this image you can see all the docker containers started.
+
+![docker ps output](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/docker-ps-command.jpg)
