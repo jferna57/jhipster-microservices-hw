@@ -14,13 +14,16 @@ In the diagram below, the green components are specific to your application and 
 
 ## Proof Of Concept
 
-### Architecture Overview
+### Microservice Architecture Overview
 
 The diagram below shows the main components:
 
 ![Sample Architecture ](https://dl.dropboxusercontent.com/u/945696/jhipster-microservices-poc/jhipster-microservices-poc.png)
 
-### Steps.
+### Scaffolding a microservice project.
+
+Below it shows the steps to generate a microservice project using Jhipster 3.
+
 #### 1. Jhipster docker Installation.
 
 ``` bash
